@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Animacion</title>
+    <style>
+        /*Vamos a definir un Keyframe para luego aplicarlo a una propiedad
+        Se puede animar cualquier propiedad "animatable", consultar en w3bschools*/
+        @keyframes recorrido {
+            from {left: 0; top: 0;}  /*Se puedeponer 0% y 100%, tanto en el from como en el too*/
+                20% {left:50vw;top:80vh; }
+                60% {left:90vw;top:10vh; }
+            to {left: 100vw; top:100vh; }
+        }
+
+        div{
+            animation-name: recorrido;  /*Aqui aplicamos el keyframe definido*/
+            position: fixed; /*Para animar la posicion debe ser fixes, absolute, ..alguna mas mirarlo en w3bschools*/
+            /*animation fillmode --- dodne acaba*/
+            animation-delay: 1s; /*tiempo que tarda en empezar la animacion*/
+            animation-duration: 8s; /*tiempo que dura.*/
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-play-state: running; /*Esta propiedad puede modificarse con javascript para ir juagndo e ir parando*/
+            animation-timing-function: ease-in-out;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--Vamos a utilizar las entidades para repasar -->
+    <div>&#128520</div> <!--Usamos el icono dle demonio y lo vamos a animar por la pantalla-->
+</body>
+</html>

@@ -7,10 +7,22 @@
     <title>Centrar con Grid</title>
     <style>
         /*EJEMPLO EN CLASE PARA CENTRAR CON GRID*/
+        body{
+            width: 100vw;
+            height: 100vh;
+            display:grid; /*No suele hacerse directamente en el body. Ahora pq es un ejercicio pequeño*/
+            justify-content: center;
+            align-content: center;
+            
+        }
         div{
             
-            height: 5rem;
-            width: 5rem;
+            height: 20vh;  /*la anchura y la altura no es igual*/
+            width: 20vw;  /*para hacerlos iguales... vmax(de la anchura y la altura coge el maximo) o vmin(igual peor coge la medida minima*/
+            /*maxheight coge el porcentaje pero no permite que vaya más alla de la medida máxima y mínima*/
+            border-radius: 1rem;
+            background-color:darkslategray;
+            outline: 2px solid lightseagreen;
         }
 
     </style>
